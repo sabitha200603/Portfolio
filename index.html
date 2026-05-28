@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sabitha Sankar | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#0b0b1f;
+  color:white;
+  overflow-x:hidden;
+}
+
+nav{
+  width:100%;
+  padding:20px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:fixed;
+  top:0;
+  background:rgba(0,0,0,0.3);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+nav h1{
+  color:#c084fc;
+  font-size:32px;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:30px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#c084fc;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:80px;
+  padding:120px 10%;
+  flex-wrap:wrap;
+}
+
+.hero-text{
+  flex:1;
+  min-width:300px;
+}
+
+.hero-text h3{
+  color:#d8b4fe;
+  font-size:28px;
+}
+
+.hero-text h1{
+  font-size:75px;
+  line-height:1.1;
+  margin-top:10px;
+}
+
+.hero-text span{
+  color:#c084fc;
+}
+
+.hero-text p{
+  margin-top:25px;
+  color:#d1d5db;
+  line-height:1.8;
+  max-width:600px;
+}
+
+.buttons{
+  margin-top:35px;
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:14px 35px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn-primary{
+  background:#7c3aed;
+  color:white;
+}
+
+.btn-primary:hover{
+  transform:translateY(-5px);
+}
+
+.btn-outline{
+  border:2px solid #7c3aed;
+  color:#d8b4fe;
+}
+
+.btn-outline:hover{
+  background:#7c3aed;
+  color:white;
+}
+
+.hero-image{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  min-width:300px;
+}
+
+.hero-image img{
+  width:340px;
+  height:340px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid #a855f7;
+}
+
+section{
+  padding:100px 10%;
+}
+
+.title{
+  text-align:center;
+  font-size:45px;
+  margin-bottom:60px;
+  color:#d8b4fe;
+}
+
+.glass{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:20px;
+  padding:40px;
+}
+
+.about p{
+  color:#d1d5db;
+  line-height:1.9;
+}
+
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;
+}
+
+.skill-card{
+  text-align:center;
+  transition:0.3s;
+}
+
+.skill-card:hover{
+  transform:translateY(-8px);
+}
+
+.skill-card h3{
+  color:#f3e8ff;
+}
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+}
+
+.project-card h3{
+  color:#d8b4fe;
+  margin-bottom:15px;
+}
+
+.project-card p{
+  color:#d1d5db;
+  line-height:1.8;
+}
+
+.project-btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 24px;
+  background:#7c3aed;
+  color:white;
+  text-decoration:none;
+  border-radius:10px;
+}
+
+.contact{
+  text-align:center;
+}
+
+.contact p{
+  margin-top:15px;
+  color:#d1d5db;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:#94a3b8;
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+
+@media(max-width:900px){
+
+  .hero{
+    flex-direction:column-reverse;
+    text-align:center;
+  }
+
+  .hero-text h1{
+    font-size:50px;
+  }
+
+  nav ul{
+    display:none;
+  }
+
+  .hero-image img{
+    width:250px;
+    height:250px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<h1>Sabitha.</h1>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h3>Hello, I'm</h3>
+
+<h1>Sabitha <span>Sankar</span></h1>
+
+<p>
+Passionate Frontend Developer and BCA student focused on
+building modern responsive websites and learning new technologies.
+Skilled in HTML, CSS, SQL, Python basics and GitHub.
+</p>
+
+<div class="buttons">
+
+<a href="#projects" class="btn btn-primary">
+View Projects
+</a>
+
+<a href="resume.pdf" download class="btn btn-outline">
+Download Resume
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="profile.jpg" alt="Sabitha">
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<div class="glass about">
+
+<p>
+I am Sabitha Sankar, a motivated BCA student interested in
+frontend development and software technologies. I enjoy building
+creative responsive websites and continuously improving my skills.
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="title">Skills</h2>
+
+<div class="skills">
+
+<div class="glass skill-card">
+<h3>HTML</h3>
+</div>
+
+<div class="glass skill-card">
+<h3>CSS</h3>
+</div>
+
+<div class="glass skill-card">
+<h3>JavaScript</h3>
+</div>
+
+<div class="glass skill-card">
+<h3>Python</h3>
+</div>
+
+<div class="glass skill-card">
+<h3>Java</h3>
+</div>
+
+<div class="glass skill-card">
+<h3>SQL</h3>
+</div>
+
+<div class="glass skill-card">
+<h3>GitHub</h3>
+</div>
+
+<div class="glass skill-card">
+<h3>MS Excel</h3>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="title">Projects</h2>
+
+<div class="projects">
+
+<div class="glass project-card">
+
+<h3>Lost & Found Campus</h3>
+
+<p>
+A web application designed to help students report and recover
+lost items within college campus.
+</p>
+
+<a href="https://lostandfoundclgcampus.netlify.app"
+target="_blank"
+class="project-btn">
+
+View Project
+
+</a>
+
+</div>
+
+<div class="glass project-card">
+
+<h3>Loyalty DataPoints Exchange System</h3>
+
+<p>
+Blockchain based project for secure loyalty datapoints exchange.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Contact</h2>
+
+<div class="glass contact">
+
+<p>Email : sabithasankar872006@gmail.com</p>
+
+<p>Phone : 7604948660</p>
+
+<p>Location : Tamil Nadu, India</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Sabitha Sankar | Portfolio
+
+</footer>
+
+</body>
+</html>
